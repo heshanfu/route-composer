@@ -19,7 +19,7 @@ class BlurredBackgroundTransitionAnimator: NSObject, UIViewControllerAnimatedTra
         return 0.3
     }
     
-    private func blurEffectView(_ style: UIBlurEffectStyle = .light, frame: CGRect? = nil, backgroundColor: UIColor?) -> UIVisualEffectView {
+    private func blurEffectView(_ style: UIBlurEffect.Style = .light, frame: CGRect? = nil, backgroundColor: UIColor?) -> UIVisualEffectView {
         let blurEffect = UIBlurEffect(style: style)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         if let frame = frame {
