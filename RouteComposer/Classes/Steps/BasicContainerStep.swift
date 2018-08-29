@@ -6,8 +6,8 @@ import Foundation
 import UIKit
 
 /// Base class for steps that produces basic container steps.
-public class BasicContainerStep<F: Finder, FC: Container, C: ContainerViewController>: BasicStepAssembly where F.ViewController == FC.ViewController, F.Context == FC.Context, FC.ViewController == C{
-    
+public class BasicContainerStep<F: Finder, FC: Container, C: ContainerViewController>: BasicStepAssembly where F.ViewController == FC.ViewController, F.Context == FC.Context, FC.ViewController == C {
+
     /// Creates a instance of the `RoutingStep` that produces container view controller.
     ///
     /// - Parameters:
@@ -16,5 +16,5 @@ public class BasicContainerStep<F: Finder, FC: Container, C: ContainerViewContro
     public init(finder: F, factory: FC) {
         super.init(routingStep: BasicStepAssembly.RoutingContainerStep<F, ContainerFactoryBox<FC>>(finder: finder, factory: factory))
     }
-    
+
 }
